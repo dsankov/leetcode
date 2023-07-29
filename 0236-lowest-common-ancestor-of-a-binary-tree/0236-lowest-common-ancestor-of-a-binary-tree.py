@@ -12,8 +12,6 @@ class Solution:
         if not root:
             return None
 
-        nodes_to_find = (p, q)
-
         def find_node(root: TreeNode, node: TreeNode, path: list[TreeNode]) -> list[TreeNode] | None:
                 if not root:
                     return None
