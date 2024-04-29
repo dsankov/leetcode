@@ -2,9 +2,13 @@ class Solution:
     def minEatingSpeed(self, piles: List[int], h: int) -> int:
         def check_eating_speed(k: int) -> bool:
             time = 0
+            
+#            for pile in piles:
+#                time += pile // k
+#                time += 1 if pile % k else 0
+            
             for pile in piles:
-                time += pile // k
-                time += 1 if pile % k else 0
+                time += math.ceil(pile / k)
             return time <= h
         
         left, right = 1, max(piles)
