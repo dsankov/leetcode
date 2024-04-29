@@ -18,7 +18,16 @@ class Solution:
         while left < right:
             medium = (left + right) // 2
             
-            if check_eating_speed(medium):
+#            if check_eating_speed(medium):                
+            time = 0            
+#            for pile in piles:
+#                time += pile // k
+#                time += 1 if pile % k else 0
+            
+            for pile in piles:
+                time += math.ceil(pile / medium)
+            
+            if time <= h:
                 right = medium
             else:
                 left = medium + 1
