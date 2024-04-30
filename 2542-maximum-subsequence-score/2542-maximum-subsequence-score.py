@@ -9,10 +9,9 @@ class Solution:
         for n1, n2 in sorted_pairs:
             heapq.heappush(numbers_to_sum, n1)
             max_sum += n1
-            if len(numbers_to_sum) > k:
-                max_sum -= heapq.heappop(numbers_to_sum)
+                
             if len(numbers_to_sum) == k:
                 result = max(result, max_sum * n2)
-        
-        
+                max_sum -= heapq.heappop(numbers_to_sum)
+             
         return result
