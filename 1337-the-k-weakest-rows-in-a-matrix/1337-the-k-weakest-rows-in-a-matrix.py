@@ -16,8 +16,8 @@ class Solution:
         strenghts = [Strenght(i, sum(mat[i])) for i in range(n)]
         heapq.heapify(strenghts)
    
-        result = []
-        for i in range(k):
-            strenght = heapq.heappop(strenghts)
-            result.append(strenght.position)
+        result = [strenght.position for strenght in heapq.nsmallest(k, strenghts)]
+        # for i in range(k):
+        #     strenght = heapq.heappop(strenghts)
+        #     result.append(strenght.position)
         return result
