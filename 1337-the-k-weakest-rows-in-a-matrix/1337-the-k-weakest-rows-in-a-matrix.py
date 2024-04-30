@@ -13,11 +13,19 @@ class Solution:
                 return False
             
         n = len(mat)
-        strenghts = [Strenght(i, sum(mat[i])) for i in range(n)]
+        
+        strenghts = [(sum(mat[i]), i) for i in range(n)]
         heapq.heapify(strenghts)
    
-        result = [strenght.position for strenght in heapq.nsmallest(k, strenghts)]
-        # for i in range(k):
-        #     strenght = heapq.heappop(strenghts)
-        #     result.append(strenght.position)
+        result = [strenght[1] for strenght in heapq.nsmallest(k, strenghts)]
         return result
+        
+        
+#         strenghts = [Strenght(i, sum(mat[i])) for i in range(n)]
+#         heapq.heapify(strenghts)
+   
+#         result = [strenght.position for strenght in heapq.nsmallest(k, strenghts)]
+#         # for i in range(k):
+#         #     strenght = heapq.heappop(strenghts)
+#         #     result.append(strenght.position)
+#         return result
