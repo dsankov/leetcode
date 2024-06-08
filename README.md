@@ -6,14 +6,17 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0007-reverse-integer](https://github.com/dsankov/leetcode/tree/master/0007-reverse-integer) |
+| [0523-continuous-subarray-sum](https://github.com/dsankov/leetcode/tree/master/0523-continuous-subarray-sum) |
 # Array
 |  |
 | ------- |
+| [0523-continuous-subarray-sum](https://github.com/dsankov/leetcode/tree/master/0523-continuous-subarray-sum) |
 | [0876-hand-of-straights](https://github.com/dsankov/leetcode/tree/master/0876-hand-of-straights) |
 | [1044-find-common-characters](https://github.com/dsankov/leetcode/tree/master/1044-find-common-characters) |
 # Hash Table
 |  |
 | ------- |
+| [0523-continuous-subarray-sum](https://github.com/dsankov/leetcode/tree/master/0523-continuous-subarray-sum) |
 | [0876-hand-of-straights](https://github.com/dsankov/leetcode/tree/master/0876-hand-of-straights) |
 | [1044-find-common-characters](https://github.com/dsankov/leetcode/tree/master/1044-find-common-characters) |
 # String
@@ -28,3 +31,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0876-hand-of-straights](https://github.com/dsankov/leetcode/tree/master/0876-hand-of-straights) |
+# Prefix Sum
+|  |
+| ------- |
+| [0523-continuous-subarray-sum](https://github.com/dsankov/leetcode/tree/master/0523-continuous-subarray-sum) |
