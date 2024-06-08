@@ -13,6 +13,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0523-continuous-subarray-sum](https://github.com/dsankov/leetcode/tree/master/0523-continuous-subarray-sum) |
 | [0876-hand-of-straights](https://github.com/dsankov/leetcode/tree/master/0876-hand-of-straights) |
 | [1044-find-common-characters](https://github.com/dsankov/leetcode/tree/master/1044-find-common-characters) |
+| [1730-special-array-with-x-elements-greater-than-or-equal-x](https://github.com/dsankov/leetcode/tree/master/1730-special-array-with-x-elements-greater-than-or-equal-x) |
 # Hash Table
 |  |
 | ------- |
@@ -31,7 +32,12 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0876-hand-of-straights](https://github.com/dsankov/leetcode/tree/master/0876-hand-of-straights) |
+| [1730-special-array-with-x-elements-greater-than-or-equal-x](https://github.com/dsankov/leetcode/tree/master/1730-special-array-with-x-elements-greater-than-or-equal-x) |
 # Prefix Sum
 |  |
 | ------- |
 | [0523-continuous-subarray-sum](https://github.com/dsankov/leetcode/tree/master/0523-continuous-subarray-sum) |
+# Binary Search
+|  |
+| ------- |
+| [1730-special-array-with-x-elements-greater-than-or-equal-x](https://github.com/dsankov/leetcode/tree/master/1730-special-array-with-x-elements-greater-than-or-equal-x) |
