@@ -13,6 +13,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0523-continuous-subarray-sum](https://github.com/dsankov/leetcode/tree/master/0523-continuous-subarray-sum) |
 | [0876-hand-of-straights](https://github.com/dsankov/leetcode/tree/master/0876-hand-of-straights) |
 | [1044-find-common-characters](https://github.com/dsankov/leetcode/tree/master/1044-find-common-characters) |
+| [1217-relative-sort-array](https://github.com/dsankov/leetcode/tree/master/1217-relative-sort-array) |
 | [1730-special-array-with-x-elements-greater-than-or-equal-x](https://github.com/dsankov/leetcode/tree/master/1730-special-array-with-x-elements-greater-than-or-equal-x) |
 # Hash Table
 |  |
@@ -20,6 +21,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0523-continuous-subarray-sum](https://github.com/dsankov/leetcode/tree/master/0523-continuous-subarray-sum) |
 | [0876-hand-of-straights](https://github.com/dsankov/leetcode/tree/master/0876-hand-of-straights) |
 | [1044-find-common-characters](https://github.com/dsankov/leetcode/tree/master/1044-find-common-characters) |
+| [1217-relative-sort-array](https://github.com/dsankov/leetcode/tree/master/1217-relative-sort-array) |
 # String
 |  |
 | ------- |
@@ -33,6 +35,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0876-hand-of-straights](https://github.com/dsankov/leetcode/tree/master/0876-hand-of-straights) |
+| [1217-relative-sort-array](https://github.com/dsankov/leetcode/tree/master/1217-relative-sort-array) |
 | [1730-special-array-with-x-elements-greater-than-or-equal-x](https://github.com/dsankov/leetcode/tree/master/1730-special-array-with-x-elements-greater-than-or-equal-x) |
 # Prefix Sum
 |  |
@@ -48,3 +51,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [1321-get-equal-substrings-within-budget](https://github.com/dsankov/leetcode/tree/master/1321-get-equal-substrings-within-budget) |
+# Counting Sort
+|  |
+| ------- |
+| [1217-relative-sort-array](https://github.com/dsankov/leetcode/tree/master/1217-relative-sort-array) |
