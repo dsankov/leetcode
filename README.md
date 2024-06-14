@@ -59,3 +59,11 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0982-minimum-increment-to-make-array-unique](https://github.com/dsankov/leetcode/tree/master/0982-minimum-increment-to-make-array-unique) |
 | [1217-relative-sort-array](https://github.com/dsankov/leetcode/tree/master/1217-relative-sort-array) |
+# Linked List
+|  |
+| ------- |
+| [0024-swap-nodes-in-pairs](https://github.com/dsankov/leetcode/tree/master/0024-swap-nodes-in-pairs) |
+# Recursion
+|  |
+| ------- |
+| [0024-swap-nodes-in-pairs](https://github.com/dsankov/leetcode/tree/master/0024-swap-nodes-in-pairs) |
