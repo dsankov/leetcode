@@ -12,6 +12,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0523-continuous-subarray-sum](https://github.com/dsankov/leetcode/tree/master/0523-continuous-subarray-sum) |
 | [0876-hand-of-straights](https://github.com/dsankov/leetcode/tree/master/0876-hand-of-straights) |
+| [0982-minimum-increment-to-make-array-unique](https://github.com/dsankov/leetcode/tree/master/0982-minimum-increment-to-make-array-unique) |
 | [1044-find-common-characters](https://github.com/dsankov/leetcode/tree/master/1044-find-common-characters) |
 | [1217-relative-sort-array](https://github.com/dsankov/leetcode/tree/master/1217-relative-sort-array) |
 | [1730-special-array-with-x-elements-greater-than-or-equal-x](https://github.com/dsankov/leetcode/tree/master/1730-special-array-with-x-elements-greater-than-or-equal-x) |
@@ -31,10 +32,12 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0876-hand-of-straights](https://github.com/dsankov/leetcode/tree/master/0876-hand-of-straights) |
+| [0982-minimum-increment-to-make-array-unique](https://github.com/dsankov/leetcode/tree/master/0982-minimum-increment-to-make-array-unique) |
 # Sorting
 |  |
 | ------- |
 | [0876-hand-of-straights](https://github.com/dsankov/leetcode/tree/master/0876-hand-of-straights) |
+| [0982-minimum-increment-to-make-array-unique](https://github.com/dsankov/leetcode/tree/master/0982-minimum-increment-to-make-array-unique) |
 | [1217-relative-sort-array](https://github.com/dsankov/leetcode/tree/master/1217-relative-sort-array) |
 | [1730-special-array-with-x-elements-greater-than-or-equal-x](https://github.com/dsankov/leetcode/tree/master/1730-special-array-with-x-elements-greater-than-or-equal-x) |
 # Prefix Sum
@@ -54,4 +57,5 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 # Counting Sort
 |  |
 | ------- |
+| [0982-minimum-increment-to-make-array-unique](https://github.com/dsankov/leetcode/tree/master/0982-minimum-increment-to-make-array-unique) |
 | [1217-relative-sort-array](https://github.com/dsankov/leetcode/tree/master/1217-relative-sort-array) |
