@@ -10,6 +10,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 # Array
 |  |
 | ------- |
+| [0502-ipo](https://github.com/dsankov/leetcode/tree/master/0502-ipo) |
 | [0523-continuous-subarray-sum](https://github.com/dsankov/leetcode/tree/master/0523-continuous-subarray-sum) |
 | [0876-hand-of-straights](https://github.com/dsankov/leetcode/tree/master/0876-hand-of-straights) |
 | [0982-minimum-increment-to-make-array-unique](https://github.com/dsankov/leetcode/tree/master/0982-minimum-increment-to-make-array-unique) |
@@ -31,11 +32,13 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 # Greedy
 |  |
 | ------- |
+| [0502-ipo](https://github.com/dsankov/leetcode/tree/master/0502-ipo) |
 | [0876-hand-of-straights](https://github.com/dsankov/leetcode/tree/master/0876-hand-of-straights) |
 | [0982-minimum-increment-to-make-array-unique](https://github.com/dsankov/leetcode/tree/master/0982-minimum-increment-to-make-array-unique) |
 # Sorting
 |  |
 | ------- |
+| [0502-ipo](https://github.com/dsankov/leetcode/tree/master/0502-ipo) |
 | [0876-hand-of-straights](https://github.com/dsankov/leetcode/tree/master/0876-hand-of-straights) |
 | [0982-minimum-increment-to-make-array-unique](https://github.com/dsankov/leetcode/tree/master/0982-minimum-increment-to-make-array-unique) |
 | [1217-relative-sort-array](https://github.com/dsankov/leetcode/tree/master/1217-relative-sort-array) |
@@ -67,3 +70,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0024-swap-nodes-in-pairs](https://github.com/dsankov/leetcode/tree/master/0024-swap-nodes-in-pairs) |
+# Heap (Priority Queue)
+|  |
+| ------- |
+| [0502-ipo](https://github.com/dsankov/leetcode/tree/master/0502-ipo) |
