@@ -10,6 +10,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 # Array
 |  |
 | ------- |
+| [0330-patching-array](https://github.com/dsankov/leetcode/tree/master/0330-patching-array) |
 | [0502-ipo](https://github.com/dsankov/leetcode/tree/master/0502-ipo) |
 | [0523-continuous-subarray-sum](https://github.com/dsankov/leetcode/tree/master/0523-continuous-subarray-sum) |
 | [0876-hand-of-straights](https://github.com/dsankov/leetcode/tree/master/0876-hand-of-straights) |
@@ -32,6 +33,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 # Greedy
 |  |
 | ------- |
+| [0330-patching-array](https://github.com/dsankov/leetcode/tree/master/0330-patching-array) |
 | [0502-ipo](https://github.com/dsankov/leetcode/tree/master/0502-ipo) |
 | [0876-hand-of-straights](https://github.com/dsankov/leetcode/tree/master/0876-hand-of-straights) |
 | [0982-minimum-increment-to-make-array-unique](https://github.com/dsankov/leetcode/tree/master/0982-minimum-increment-to-make-array-unique) |
