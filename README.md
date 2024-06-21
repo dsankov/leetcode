@@ -17,6 +17,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0876-hand-of-straights](https://github.com/dsankov/leetcode/tree/master/0876-hand-of-straights) |
 | [0982-minimum-increment-to-make-array-unique](https://github.com/dsankov/leetcode/tree/master/0982-minimum-increment-to-make-array-unique) |
 | [1044-find-common-characters](https://github.com/dsankov/leetcode/tree/master/1044-find-common-characters) |
+| [1138-grumpy-bookstore-owner](https://github.com/dsankov/leetcode/tree/master/1138-grumpy-bookstore-owner) |
 | [1217-relative-sort-array](https://github.com/dsankov/leetcode/tree/master/1217-relative-sort-array) |
 | [1605-minimum-number-of-days-to-make-m-bouquets](https://github.com/dsankov/leetcode/tree/master/1605-minimum-number-of-days-to-make-m-bouquets) |
 | [1730-special-array-with-x-elements-greater-than-or-equal-x](https://github.com/dsankov/leetcode/tree/master/1730-special-array-with-x-elements-greater-than-or-equal-x) |
@@ -64,6 +65,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 # Sliding Window
 |  |
 | ------- |
+| [1138-grumpy-bookstore-owner](https://github.com/dsankov/leetcode/tree/master/1138-grumpy-bookstore-owner) |
 | [1321-get-equal-substrings-within-budget](https://github.com/dsankov/leetcode/tree/master/1321-get-equal-substrings-within-budget) |
 # Counting Sort
 |  |
