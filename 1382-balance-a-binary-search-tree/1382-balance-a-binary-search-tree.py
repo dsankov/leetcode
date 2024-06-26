@@ -17,17 +17,17 @@ class Solution:
                 result.extend(get_inorder(root.right))
             return result
 
-        def make_balanced_bst(inorder: list[int], left: int, right: int) -> TreeNode:
-            if not inorder or left > right:
+        def make_balanced_bst(left: int, right: int) -> TreeNode:
+            if left > right:
                 return None
             mid = left + (right - left) // 2
             root = TreeNode(inorder[mid])
-            root.left = make_balanced_bst(inorder, left, mid-1)
-            root.right = make_balanced_bst(inorder, mid+1, right)
+            root.left = make_balanced_bst(left, mid-1)
+            root.right = make_balanced_bst(mid+1, right)
             return root
 
         inorder = get_inorder(root)
-        result = make_balanced_bst(inorder, left=0, right=len(inorder)-1)
+        result = make_balanced_bst(left=0, right=len(inorder)-1)
 
         return result
 
