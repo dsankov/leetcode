@@ -1,10 +1,10 @@
 class Solution:
     def threeConsecutiveOdds(self, arr: List[int]) -> bool:
-        # counter = 0
-        # for num in arr:
-        #     counter = 0 if num % 2 == 0 else counter + 1
-        #     if counter == 3:
-        #         return  True
-        # return False
+        counter = 3
+        for num in arr:
+            counter = counter - 1 if num & 1 else 3
+            if not counter:
+                return  True
+        return False
 
-        return "111" in "".join([str(num & 1) for num in arr])
+        # return "111" in "".join([str(num & 1) for num in arr])
