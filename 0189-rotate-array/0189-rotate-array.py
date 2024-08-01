@@ -4,13 +4,11 @@ class Solution:
         Do not return anything, modify nums in-place instead.
         """
         n = len(nums)
-        groups = math.gcd(n, k)
-        for start in range(groups):
-            write = (start + k) % n
-            prev_num = nums[start]
-            while write != start:
-                save_num = nums[write]
-                nums[write] = prev_num
-                prev_num = save_num
-                write = (write + k) % n
-            nums[write] = prev_num
+        cycle_groups = math.gcd(n, k)
+        for start_position in range(cycle_groups):
+            write_position = (start_position + k) % n
+            transit_num = nums[start_position]
+            while write_position != start_position:
+                nums[write_position], transit_num = transit_num, nums[write_position]
+                write_position = (write_position + k) % n
+            nums[start_position] = transit_num   # start_position == write_position
