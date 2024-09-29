@@ -1,7 +1,7 @@
 class TrieNode:
     def __init__(self):
-        self.children = {}
-        self.is_word =False
+        self.children = defaultdict(TrieNode)
+        self.is_word = False
 
 class Solution:
     def minExtraChar(self, s: str, dictionary: List[str]) -> int:
@@ -24,10 +24,10 @@ class Solution:
     def _build_trie(self, dictionary):
         root = TrieNode()
         for word in dictionary:
-            node =root
+            node = root
             for char in word:
-                if char not in node.children:
-                    node.children[char] = TrieNode()
+                # if char not in node.children:
+                #     node.children[char] = TrieNode()
                 node = node.children[char]
             node.is_word = True
         return root
