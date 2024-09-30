@@ -11,17 +11,18 @@ class CustomStack:
         
 
     def pop(self) -> int:
-        if not self.stack:
+        if len(self.stack) == 0:
             return -1
 
         value, increment = self.stack.pop()
-        if self.stack:
+        if len(self.stack) > 0:
             self.stack[-1][1] += increment
         return value + increment
         
 
     def increment(self, k: int, val: int) -> None:
-        self.stack[min(k, self.max_size) - 1][1] += val
+        if len(self.stack) > 0 and k > 0:
+            self.stack[min(k-1, len(self.stack)-1)][1] += val
         
 
 
