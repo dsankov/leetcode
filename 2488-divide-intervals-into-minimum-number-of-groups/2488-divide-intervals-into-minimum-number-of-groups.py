@@ -1,13 +1,9 @@
 class Solution:
     def minGroups(self, intervals: List[List[int]]) -> int:
-        events = []
-        for interval_start, interval_end in intervals:
-            events.append((interval_start, 1))
-            events.append((interval_end + 1, -1))
-        events.sort()
-        max_interseptions = 0
-        current_interseptions = 0
-        for event_time, event_type in events:
-            current_interseptions += event_type
-            max_interseptions = max(max_interseptions, current_interseptions)
-        return max_interseptions
+        groups_endtime_pq = []
+        for interval_start, interval_end in sorted(intervals):
+            if groups_endtime_pq and groups_endtime_pq[0] < interval_start:
+                heappop(groups_endtime_pq)
+            heappush(groups_endtime_pq, interval_end)
+
+        return len(groups_endtime_pq)
