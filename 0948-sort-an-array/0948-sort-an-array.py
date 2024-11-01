@@ -7,6 +7,7 @@ class Solution:
         # self.merge_sort(nums)
         self.heap_sort(nums)
 
+        # Time limit error
         # self.quick_sort(nums)
 
 
