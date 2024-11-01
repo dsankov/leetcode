@@ -4,8 +4,8 @@ class Solution:
         # self.bubble_sort(nums)
         # self.selection_sort(nums)
         # self.insertion_sort(nums)
-        self.merge_sort(nums)
-        # self.heap_sort(nums)
+        # self.merge_sort(nums)
+        self.heap_sort(nums)
 
         # self.quick_sort(nums)
 
@@ -80,6 +80,18 @@ class Solution:
             nums[i] = heappop(nums_heap)
 
     def quick_sort(self, nums):
+        def median_of_three(arr, low, high):
+            mid = (low + high) // 2
+            # Определяем медиану из элементов arr[low], arr[mid], arr[high]
+            if arr[low] > arr[mid]:
+                arr[low], arr[mid] = arr[mid], arr[low]
+            if arr[low] > arr[high]:
+                arr[low], arr[high] = arr[high], arr[low]
+            if arr[mid] > arr[high]:
+                arr[mid], arr[high] = arr[high], arr[mid]
+            # Возвращаем индекс медианного элемента
+            return mid
+
         def quick_sort_inplace(nums, low, high):
             if low < high:
                 pivot_index = partition(nums, low, high)
@@ -87,7 +99,9 @@ class Solution:
                 quick_sort_inplace(nums, pivot_index + 1, high)
                 
         def partition(nums, low, high):
-            pivot = nums[high]
+            pivot_index = median_of_three(nums, low, high)
+            pivot = nums[pivot_index]
+            nums[pivot_index], nums[high] = nums[high], nums[pivot_index]
             i = low - 1
             for j in range(low, high):
                 if nums[j] <= pivot:
