@@ -1,35 +1,101 @@
 class Solution:
     def sortArray(self, nums: List[int]) -> List[int]:
-        def mergeSort(nums): 
-            if len(nums) > 1: 
-                mid = len(nums)//2
-                L = nums[:mid] 
-                R = nums[mid:] 
 
-                mergeSort(L)
-                mergeSort(R)
+        # self.bubble_sort(nums)
+        # self.selection_sort(nums)
+        # self.insertion_sort(nums)
+        self.merge_sort(nums)
+        # self.heap_sort(nums)
 
-                i = j = k = 0
+        # self.quick_sort(nums)
 
-                while i < len(L) and j < len(R): 
-                    if L[i] < R[j]: 
-                        nums[k] = L[i] 
-                        i+=1
-                    else: 
-                        nums[k] = R[j] 
-                        j+=1
-                    k+=1
-    
-                while i < len(L): 
-                    nums[k] = L[i] 
-                    i+=1
-                    k+=1
 
-                while j < len(R): 
-                    nums[k] = R[j] 
-                    j+=1
-                    k+=1
-
-        mergeSort(nums)
         return nums
-            
+    def merge_sort(self, nums): 
+        if len(nums) <= 1:
+            return
+
+        mid = len(nums)//2
+        left_part = nums[:mid] 
+        right_part = nums[mid:] 
+
+        self.merge_sort(left_part)
+        self.merge_sort(right_part)
+
+        def merge_sorted(left_part, right_part, nums):
+            read_left, read_right, write_result = 0, 0 ,0
+
+            while read_left < len(left_part) and read_right < len(right_part): 
+                if left_part[read_left] < right_part[read_right]: 
+                    nums[write_result] = left_part[read_left]
+                    read_left += 1
+                else: 
+                    nums[write_result] = right_part[read_right] 
+                    read_right += 1
+                write_result += 1
+
+            while read_left < len(left_part): 
+                nums[write_result] = left_part[read_left] 
+                read_left += 1
+                write_result += 1
+
+            while read_right < len(right_part): 
+                nums[write_result] = right_part[read_right]
+                read_right += 1
+                write_result += 1
+
+        merge_sorted(left_part, right_part, nums)
+
+    def bubble_sort(self, nums):
+        n = len(nums)
+        for i in range(n):
+            for j in range(n - 1 - i):
+                if nums[j] > nums[j+1]:
+                    nums[j], nums[j+1] = nums[j+1], nums[j]
+
+    def insertion_sort(self, nums):
+        n = len(nums)
+        for curr_position in range(1, n):
+            curr_value = nums[curr_position]
+            insert_position = curr_position
+            while insert_position > 0 and nums[insert_position - 1] > curr_value:
+                nums[insert_position] = nums[insert_position - 1]
+                insert_position -= 1
+            nums[insert_position] = curr_value
+
+    def selection_sort(self, nums):
+        n = len(nums)
+        for write_min_index in range(n):
+            min_index = write_min_index
+            for read_index in range(write_min_index + 1, n):
+                if nums[read_index] < nums[min_index]:
+                    min_index = read_index
+            nums[write_min_index], nums[min_index] = nums[min_index], nums[write_min_index] 
+
+    def heap_sort(self, nums):
+        nums_heap = []
+        for num in nums:
+            heappush(nums_heap, num)
+        for i in range(len(nums)):
+            nums[i] = heappop(nums_heap)
+
+    def quick_sort(self, nums):
+        def quick_sort_inplace(nums, low, high):
+            if low < high:
+                pivot_index = partition(nums, low, high)
+                quick_sort_inplace(nums, low, pivot_index - 1)
+                quick_sort_inplace(nums, pivot_index + 1, high)
+                
+        def partition(nums, low, high):
+            pivot = nums[high]
+            i = low - 1
+            for j in range(low, high):
+                if nums[j] <= pivot:
+                    i += 1
+                    nums[i], nums[j] = nums[j], nums[i]
+            nums[i + 1], nums[high] = nums[high], nums[i + 1]
+            return i + 1
+
+        quick_sort_inplace(nums, 0, len(nums)-1)
+
+        
