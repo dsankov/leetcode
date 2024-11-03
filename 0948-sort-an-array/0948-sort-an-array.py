@@ -5,10 +5,10 @@ class Solution:
         # self.selection_sort(nums)
         # self.insertion_sort(nums)
         # self.merge_sort(nums)
-        self.heap_sort(nums)
+        # self.heap_sort(nums)
 
         # Time limit error
-        # self.quick_sort(nums)
+        self.quick_sort(nums)
 
 
         return nums
@@ -93,12 +93,35 @@ class Solution:
             # Возвращаем индекс медианного элемента
             return mid
 
-        def quick_sort_inplace(nums, low, high):
-            if low < high:
-                pivot_index = partition(nums, low, high)
-                quick_sort_inplace(nums, low, pivot_index - 1)
-                quick_sort_inplace(nums, pivot_index + 1, high)
-                
+        def quick_sort_inplace(nums, left, right):
+            if left >= right:
+                return
+
+            # pivot_index = partition(nums, low, high)
+            pivot = nums[randint(left, right)]
+            less_than_pivot_ptr = left -1
+            greater_than_pivot_ptr = right + 1
+            current_ptr = left
+            while current_ptr < greater_than_pivot_ptr:
+                if nums[current_ptr] < pivot:
+                    less_than_pivot_ptr += 1
+                    nums[less_than_pivot_ptr] , nums[current_ptr] = nums[current_ptr], nums[less_than_pivot_ptr]
+                    current_ptr += 1
+                elif nums[current_ptr] > pivot:
+                    greater_than_pivot_ptr -= 1
+                    nums[greater_than_pivot_ptr], nums[current_ptr] = nums[current_ptr], nums[greater_than_pivot_ptr]
+                else:
+                    current_ptr += 1
+
+
+            quick_sort_inplace(nums, left, less_than_pivot_ptr)
+            quick_sort_inplace(nums, greater_than_pivot_ptr, right)
+            
+        
+        
+        
+        
+        
         def partition(nums, low, high):
             pivot_index = median_of_three(nums, low, high)
             pivot = nums[pivot_index]
