@@ -98,7 +98,7 @@ class Solution:
             # next 2 pivot choices produce TLE !!!
             pivot_index = median_of_three(nums, left, right)
             # pivot_index = left
-            # pivot_index = randint(left, right)
+            pivot_index = randint(left, right)
             pivot = nums[pivot_index]
 
             less_than_pivot_ptr = left -1
