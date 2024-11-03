@@ -81,27 +81,26 @@ class Solution:
             nums[i] = heappop(nums_heap)
 
     def quick_sort(self, nums):
-        def median_of_three(arr, low, high):
-            mid = (low + high) // 2
-            # Определяем медиану из элементов arr[low], arr[mid], arr[high]
-            if arr[low] > arr[mid]:
-                arr[low], arr[mid] = arr[mid], arr[low]
-            if arr[low] > arr[high]:
-                arr[low], arr[high] = arr[high], arr[low]
-            if arr[mid] > arr[high]:
-                arr[mid], arr[high] = arr[high], arr[mid]
-            # Возвращаем индекс медианного элемента
+        def median_of_three(nums, left, right):
+            mid = (left + right) // 2
+            if nums[left] > nums[right]:
+                nums[left], nums[right] = nums[right], nums[left]
+            if nums[left] > nums[mid]:
+                nums[left], nums[mid] = nums[mid], nums[left]
+            if nums[mid] > nums[right]:
+                nums[mid], nums[right] = nums[right], nums[mid]
             return mid
 
         def quick_sort_inplace(nums, left, right):
             if left >= right:
                 return
 
-            # pivot_index = median_of_three(nums, left, right)
+            # next 2 pivot choices produce TLE !!!
+            pivot_index = median_of_three(nums, left, right)
             # pivot_index = left
-            pivot_index = randint(left, right)
+            # pivot_index = randint(left, right)
             pivot = nums[pivot_index]
-            
+
             less_than_pivot_ptr = left -1
             greater_than_pivot_ptr = right + 1
             current_ptr = left
@@ -116,27 +115,9 @@ class Solution:
                 else:
                     current_ptr += 1
 
-
             quick_sort_inplace(nums, left, less_than_pivot_ptr)
             quick_sort_inplace(nums, greater_than_pivot_ptr, right)
             
-        
-        
-        
-        
-        
-        def partition(nums, low, high):
-            pivot_index = median_of_three(nums, low, high)
-            pivot = nums[pivot_index]
-            nums[pivot_index], nums[high] = nums[high], nums[pivot_index]
-            i = low - 1
-            for j in range(low, high):
-                if nums[j] <= pivot:
-                    i += 1
-                    nums[i], nums[j] = nums[j], nums[i]
-            nums[i + 1], nums[high] = nums[high], nums[i + 1]
-            return i + 1
-
         quick_sort_inplace(nums, 0, len(nums)-1)
 
         
