@@ -97,8 +97,9 @@ class Solution:
             if left >= right:
                 return
 
-            # pivot_index = partition(nums, low, high)
-            pivot = nums[randint(left, right)]
+            # pivot_index = median_of_three(nums, left, right)
+            pivot_index = left
+            pivot = nums[pivot_index]
             less_than_pivot_ptr = left -1
             greater_than_pivot_ptr = right + 1
             current_ptr = left
