@@ -9,7 +9,7 @@ class Solution:
         n = len(nums)
         left, right = 0, 0
         sliding_or = 0
-        sliding_or_bits = [deque() for _ in range(MAX_BITS)]
+        sliding_or_bits = [0 for _ in range(MAX_BITS)]
         min_length = math.inf
         while left < n:
             if sliding_or < k:
@@ -17,7 +17,7 @@ class Solution:
                     break
                 for bit_index in range(MAX_BITS):
                     if nums[right] & (1 << bit_index):
-                        sliding_or_bits[bit_index].append(right)
+                        sliding_or_bits[bit_index] += 1
                 sliding_or |= nums[right]
                 right += 1
             else:
@@ -26,8 +26,8 @@ class Solution:
                     return min_length
                 for bit_index in range(MAX_BITS):
                     if nums[left] & (1 << bit_index):
-                        sliding_or_bits[bit_index].popleft()
-                        if len(sliding_or_bits[bit_index]) == 0:
+                        sliding_or_bits[bit_index] -= 1
+                        if sliding_or_bits[bit_index] == 0:
                             sliding_or &= NEGATIVE_BIT ^ (1 << bit_index)
                 left += 1
 
