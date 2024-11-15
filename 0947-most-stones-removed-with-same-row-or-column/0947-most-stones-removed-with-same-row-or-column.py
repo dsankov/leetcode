@@ -23,13 +23,20 @@ class Solution:
 
 
     def removeStones(self, stones: List[List[int]]) -> int:
+        UNSEEN = -1
         n = len(stones)
         uf = self.UnionFind(n)
 
-        for i in range(n):
-            for j in range(i + 1, n):
-                if (stones[i][0] == stones[j][0]
-                    or stones[i][1] == stones[j][1]):
-                        uf.union(i, j)
+        seen_row = [UNSEEN] * (10**4 + 1)
+        seen_column = [UNSEEN] * (10**4 + 1)
+        for curr_index, (curr_col, curr_row) in enumerate(stones):
+            if seen_row[curr_row] == UNSEEN:
+                seen_row[curr_row] = curr_index
+            else:
+                uf.union(curr_index, seen_row[curr_row])
+            if seen_column[curr_col] == UNSEEN:
+                seen_column[curr_col] = curr_index
+            else:
+                uf.union(curr_index, seen_column[curr_col])
 
         return n - uf.number_of_components
