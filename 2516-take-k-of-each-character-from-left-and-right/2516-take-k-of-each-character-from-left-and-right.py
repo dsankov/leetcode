@@ -17,7 +17,7 @@ class Solution:
                 curr_window_chars_counter[s[left]] -= 1
                 left += 1
 
-            max_window_size = max(max_window_size, right - left + 1)
+            max_window_size = max_window_size if max_window_size > right - left + 1 else right - left + 1
 
         return n - max_window_size
         
