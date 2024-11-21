@@ -58,4 +58,4 @@ class Solution:
             for direction in "UD":
                 mark_direction(col, direction)
 
-        return sum(grid[row][col] == UNGUARDED for row in range(m) for col in range(n))
+        return sum(row.count(UNGUARDED) for row in grid)
