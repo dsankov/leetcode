@@ -1,15 +1,15 @@
 class Solution:
     def maxMatrixSum(self, matrix: List[List[int]]) -> int:
-        min_abs_value = inf
-        count_negatives = 0
-        total_sum = 0
-        for row in matrix:
-            for num in row:
-                min_abs_value = min(min_abs_value, abs(num))
-                total_sum += abs(num)
-                if num < 0:
-                    count_negatives ^= 1
-        if count_negatives:
+        flat_matrix = chain.from_iterable(matrix)
+        min_abs_value = abs(min(flat_matrix, key=abs))
+
+        flat_matrix = chain.from_iterable(matrix)
+        count_negatives = len(list(filter(lambda x: x < 0, flat_matrix)))
+        
+        flat_matrix = chain.from_iterable(matrix)
+        total_sum = sum(abs(x) for x in flat_matrix)
+        
+        if count_negatives % 2:
             return total_sum - 2 * min_abs_value
         return total_sum
         
