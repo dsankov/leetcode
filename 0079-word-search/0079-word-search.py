@@ -1,5 +1,14 @@
 class Solution:
     def exist(self, board: List[List[str]], word: str) -> bool:
+
+        board_chars_freqs = Counter(chain.from_iterable(board))
+        for char, freq in Counter(word).items():
+            if freq > board_chars_freqs[char]:
+                return False
+        
+        if board_chars_freqs[word[0]] > board_chars_freqs[word[-1]]:
+            word = word[::-1]
+
         directions = ((1, 0), (0, 1), (-1, 0), (0, -1))
         m = len(board)
         n = len(board[0])
