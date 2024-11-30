@@ -16,7 +16,6 @@ class MedianFinder:
         
 
     def findMedian(self) -> float:
-        print()
         if len(self.lower_half) != len(self.upper_half):
             return self.upper_half[0]
         return (self.upper_half[0] - self.lower_half[0]) / 2.0
