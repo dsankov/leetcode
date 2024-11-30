@@ -17,13 +17,16 @@ class Solution:
             first_number = next(iter(used_numbers))
         path = []
 
-        def dfs(number):
-            while adjacency_list[number]:
-                next_number = adjacency_list[number].pop()
-                dfs(next_number)
-            path.append(number)
+        numbers_stack = [first_number]
+        while numbers_stack:
+            curr_number = numbers_stack[-1]
+            if adjacency_list[curr_number]:
+                next_number = adjacency_list[curr_number].pop()
+                numbers_stack.append(next_number)
+            else:
+                path.append(curr_number)
+                numbers_stack.pop()
 
-        dfs(first_number)
         return [[path[i], path[i-1]] for i in range(len(path)-1, 0, -1)]
 
     
