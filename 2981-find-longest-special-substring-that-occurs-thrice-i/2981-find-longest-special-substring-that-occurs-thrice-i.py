@@ -11,12 +11,12 @@ class Solution:
                 substr_length += 1
                 substr_freqs[(first_substr_char, substr_length)] += 1
         
-        max_length = -1
-        for (char, length), freq in substr_freqs.items():
-            if freq >= 3:
-                max_length = max(max_length, length)
+        max_length = max(
+            (length 
+                for (char, length), freq in filter(lambda item: item[1] >= 3, substr_freqs.items())),
+            default= -1  
+        )
 
         return max_length 
-        # if max_length != 0 else -1
 
 
