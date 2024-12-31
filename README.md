@@ -120,4 +120,12 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [2645-pass-the-pillow](https://github.com/dsankov/leetcode/tree/master/2645-pass-the-pillow) |
+## Array
+|  |
+| ------- |
+| [1025-minimum-cost-for-tickets](https://github.com/dsankov/leetcode/tree/master/1025-minimum-cost-for-tickets) |
+## Dynamic Programming
+|  |
+| ------- |
+| [1025-minimum-cost-for-tickets](https://github.com/dsankov/leetcode/tree/master/1025-minimum-cost-for-tickets) |
 <!---LeetCode Topics End-->
