@@ -1,49 +1,38 @@
 class Solution:
     def calculate(self, s: str) -> int:
-        self.s = list(char for char in s if char !=" ")
-        self.n = len(self.s)
-        self.ptr = 0
-        return self.eval_expr()
+        curr_sign = 1
+        curr_num = 0
+        curr_sub_result = 0
+        sub_results_stack = []
+        for char in s:
+            if char == " ":
+                continue
+            if char.isdigit():
+                curr_num = curr_num * 10 + int(char)
+                continue
 
-    def eval_expr(self):
-        result = 0
-        if self.s[self.ptr] == "(":
-            self.ptr += 1
-            result += self.eval_expr()
-            self.ptr += 1
-        elif self.s[self.ptr] == "-":
-            self.ptr += 1
-            if self.s[self.ptr] == "(":
-                self.ptr += 1
-                result -= self.eval_expr()
-                self.ptr += 1
-            else:
-                result -= self.get_num()
-        else:
-            result = self.get_num()
+            curr_sub_result += curr_num * curr_sign
+            curr_num = 0
 
-        while self.ptr < self.n and self.s[self.ptr] in "+-":
-            operation = self.s[self.ptr]
-            self.ptr += 1
-            if self.s[self.ptr] == "(":
-                self.ptr += 1
-                next_operand = self.eval_expr()
-                self.ptr += 1
-            else:
-                next_operand = self.get_num()
+            if char == "-":
+                curr_sign = -1
+                continue
 
-            if operation == "+":
-                result = result + next_operand
-            elif operation == "-":
-                result = result - next_operand
-        return result
+            if char == "(":
+                sub_results_stack.append(curr_sub_result)
+                sub_results_stack.append(curr_sign)
+                curr_sub_result = 0
+                
+            elif char == ")":
+                prev_sign = sub_results_stack.pop()
+                prev_sub_result = sub_results_stack.pop()
+                curr_sub_result = prev_sub_result + curr_sub_result * prev_sign
+                
+            else: # "+"
+                pass
+            curr_sign = 1
+        return curr_sub_result + curr_num * curr_sign
 
-    def get_num(self):
-        num = int(self.s[self.ptr])
-        self.ptr += 1
-        while self.ptr < self.n and self.s[self.ptr].isdigit():
-            num = num * 10 + int(self.s[self.ptr])
-            self.ptr += 1
-        return num
 
+            
 
