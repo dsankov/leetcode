@@ -1,67 +1,46 @@
 class Solution:
     def jobScheduling(self, startTime: List[int], endTime: List[int], profit: List[int]) -> int:
-        n = len(startTime)
-        max_end_time = max(endTime)
-        sorted_start_time = [(start_time, idx) for idx, start_time in enumerate(startTime)]
-        sorted_start_time.sort()
-        original_start_indices = [idx for _, idx in sorted_start_time]
-        sorted_start_time = [time for time, _ in sorted_start_time] 
-        print(sorted_start_time, original_start_indices)
-        dp = [-1] * n
+        n = len(profit)
+        jobs = [(start_time, end_time, job_profit) for start_time, end_time, job_profit in zip(startTime, endTime, profit)]
+        jobs.sort()
+        max_profit = [-1] * n
 
-        def max_profit(start_time_idx):
-            if start_time_idx >= n:
+        def get_max_profit(job_start_idx):
+            if job_start_idx >= n:
                 return 0
-            if dp[start_time_idx] != -1:
-                return dp[start_time_idx]
+            if max_profit[job_start_idx] != -1:
+                return max_profit[job_start_idx]
 
-            start_time = sorted_start_time[start_time_idx]
-            return 0
+            def first_availible_job(job_start_idx, job_start_time):
+                left, right = job_start_idx, n-1
+                availible_job_idx = -1
+                while left <= right:
+                    mid = (left + right) // 2
+                    mid_start_time, mid_end_time, mid_profit = jobs[mid]
+                    if mid_start_time >= job_start_time:
+                        availible_job_idx = mid
+                        right = mid - 1
+                    else:
+                        left = mid + 1
+                return availible_job_idx
 
-
-
-        return max_profit(sorted_start_time[0])
-        # start_time_idx = [(start_time, idx) for idx, start_time in enumerate(startTime)]
-        # index_to_time = {idx: time for time, idx in start_time_idx}
-        # start_time_idx.sort()
-        # # print(start_time_idx)
-
-        # # def find_left(time_idx):
-        # #     left = 0
-        # #     right = n-1
-        # #     while left < right:
-        # #         mid = (right - left) // 2
-        # #         if startTime[time_idx] == 
-
-        # def max_profit(start_time_ptr):
+            curr_job_start_time, curr_job_end_time, curr_job_profit = jobs[job_start_idx]
+            next_availible_use_job_idx = first_availible_job(job_start_idx=job_start_idx+1, job_start_time=curr_job_end_time)
+            if next_availible_use_job_idx == -1:
+                 max_use_job_profit = curr_job_profit
+            else:
+                max_use_job_profit = (curr_job_profit 
+                                    + get_max_profit(job_start_idx=next_availible_use_job_idx)
+                )
             
-        #     if start_time_ptr > n:
-        #         return 0
+            next_availible_skip_job_idx = first_availible_job(job_start_idx=job_start_idx+1, job_start_time=curr_job_start_time)
+            if next_availible_skip_job_idx == -1:
+                max_skip_job_profit = 0
+            else:
+                max_skip_job_profit = get_max_profit(job_start_idx=next_availible_skip_job_idx)
 
-        #     start_time = startTime[start_time_ptr]
-        #     if dp[start_time] != -1:
-        #         return dp[start_time]
-                
-        #     # next_jobs = set()
-        #     use_next_job_profit = 0
-        #     first_next_job_idx = bisect_left (start_time_idx, (start_time, -1))
-        #     # print(first_next_job_idx)
-        #     last_next_job_idx  = bisect_right(start_time_idx, (start_time, n+1))
-        #     for next_job_idx in range(first_next_job_idx, last_next_job_idx):
-        #         end_next_job_time = endTime[next_job_idx]
-        #         use_next_job_profit = max(use_next_job_profit, max_profit(end_next_job_idx))
-
-        #     skip_next_job_profit = 0
-        #     first_next_job_idx = bisect_left (start_time_idx, (start_time + 1, -1))
-        #     last_next_job_idx  = bisect_right(start_time_idx, (start_time + 1, n+1))
-        #     for next_job_idx in range(first_next_job_idx, last_next_job_idx):
-        #         end_next_job_time = endTime[next_job_idx]
-        #         skip_next_job_profit = max(skip_next_job_profit, max_profit(end_next_job_idx))
-
-        #     dp[start_time] = max(profit[start_time_ptr] + use_next_job_profit, skip_next_job_profit)
-        #     return dp[start_time]
-
-        # return max_profit(start_time_idx[0][1])
+            max_profit[job_start_idx] = max(max_use_job_profit, max_skip_job_profit)
+            return max_profit[job_start_idx]
 
 
-        
+        return get_max_profit(job_start_idx=0)
