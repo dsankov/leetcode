@@ -4,28 +4,25 @@ class Solution:
         node_indegrees = [0] * n
         revert_graph = [[] for _ in range(n)]
 
-        for i in range(n):
-            for node in graph[i]:
-                revert_graph[node].append(i)
-                node_indegrees[i] += 1
+        for parent, children in enumerate(graph):
+            for child in children:
+                revert_graph[child].append(parent)
+                node_indegrees[parent] += 1
 
-        edge_queue = deque()
-        for i in range(n):
-            if node_indegrees[i] == 0:
-                edge_queue.append(i)
+        edge_queue = []
+        for node, indegree in enumerate(node_indegrees):
+            if indegree == 0:
+                edge_queue.append(node)
 
         safe_nodes = [False] * n
         while edge_queue:
-            node = edge_queue.popleft()
+            node = edge_queue.pop()
             safe_nodes[node] = True
 
-            for neighbor in revert_graph[node]:
-                node_indegrees[neighbor] -= 1
-                if node_indegrees[neighbor] == 0:
-                    edge_queue.append(neighbor)
+            for child in revert_graph[node]:
+                node_indegrees[child] -= 1
+                if node_indegrees[child] == 0:
+                    edge_queue.append(child)
 
-        result = []
-        for i in range(n):
-            if safe_nodes[i]:
-                result.append(i)
+        result = [node for node, is_safe in enumerate(safe_nodes) if is_safe]
         return result        
