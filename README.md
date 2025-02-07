@@ -120,12 +120,18 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [2645-pass-the-pillow](https://github.com/dsankov/leetcode/tree/master/2645-pass-the-pillow) |
+| [3434-find-the-number-of-distinct-colors-among-the-balls](https://github.com/dsankov/leetcode/tree/master/3434-find-the-number-of-distinct-colors-among-the-balls) |
 ## Array
 |  |
 | ------- |
 | [1025-minimum-cost-for-tickets](https://github.com/dsankov/leetcode/tree/master/1025-minimum-cost-for-tickets) |
+| [3434-find-the-number-of-distinct-colors-among-the-balls](https://github.com/dsankov/leetcode/tree/master/3434-find-the-number-of-distinct-colors-among-the-balls) |
 ## Dynamic Programming
 |  |
 | ------- |
 | [1025-minimum-cost-for-tickets](https://github.com/dsankov/leetcode/tree/master/1025-minimum-cost-for-tickets) |
+## Hash Table
+|  |
+| ------- |
+| [3434-find-the-number-of-distinct-colors-among-the-balls](https://github.com/dsankov/leetcode/tree/master/3434-find-the-number-of-distinct-colors-among-the-balls) |
 <!---LeetCode Topics End-->
