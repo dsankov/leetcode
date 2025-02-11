@@ -1,72 +1,55 @@
 class Solution:
     def removeOccurrences(self, s: str, part: str) -> str:
         part_len = len(part)
-        part_array = list(part)
-        part_lps = [0] * (part_len + 1)
-        stack = []
-        part_idx = 0
-        match_len = 0
+        s_len = len(s)
 
-        for s_idx, s_char in enumerate(s):
-            stack.append(s_char)
-            if len(stack) < part_len:
-                continue
-            if stack[-part_len:] == part_array:
-                for _ in range(part_len):
-                    stack.pop()
+        part_lps = [0] * part_len
 
-        return "".join(stack)
-        #             
+        curr_pattern_idx = 1
+        prefix_len = 0
 
+        while curr_pattern_idx < part_len:
+            if part[curr_pattern_idx] == part[prefix_len]:
+                part_lps[curr_pattern_idx] = prefix_len + 1
+                prefix_len += 1
+                curr_pattern_idx += 1
+            elif prefix_len == 0:
+                part_lps[curr_pattern_idx] = 0
+                curr_pattern_idx += 1
+            else:
+                prefix_len = part_lps[prefix_len - 1]
 
-        #     part_char = part[part_idx]
-        #     char_to_check = part[match_len]
-        #     # print(f"\n{part_idx}->{part_char}")
-        #     if part_char != s_char:
-        #         part_idx = 0
-        #         stack.append((s_char, part_idx))
+        char_stack = []
+        pattern_indices = [0] * (s_len + 1)
+        s_idx = 0
+        pattern_idx = 0
+        while s_idx < s_len:
+            cur_char = s[s_idx]
+            char_stack.append(cur_char)
 
+            if cur_char == part[pattern_idx]:
+                pattern_indices[len(char_stack)] = pattern_idx + 1
+                pattern_idx += 1
 
-        #         # if match_len == 0:
-        #         #         pass
-        #         # else:
-        #         #         prev_char = match_len - 1
-        #         #         if prev_char == s_char:    
-        #         #             last_match_char, last_match_len = stack[-1]
-        #         #             match_len = last_match_len
-        #         #         else:
-        #         #             match_len = 0
-                    
-        #         # print(f"! {s_idx}->{s_char} != {char_to_check}<-{match_len}")
-        #         print(f"! \t Distinct char stack.append {s_char} {match_len}")
-
-        #     else:
-        #         # print(f"{s_idx}->{s_char} == {char_to_check}<-{match_len}")
-        #         # print("11111111111111111")
-        #         # match_len += 1
-        #         if match_len == 0:
-        #             part_idx = 0
-        #         else:
-        #             part_idx = part_lps[mach_len - 1]
-        #         part_idx += 1
+                if pattern_idx == part_len:
+                    for _ in range(part_len):
+                        char_stack.pop()
 
 
+                if not char_stack:
+                    pattern_idx = 0
+                else:
+                    pattern_idx = pattern_indices[len(char_stack)]        
+            
+            else:        
+                if pattern_idx != 0:
+                    pattern_idx = part_lps[pattern_idx - 1]
+                    s_idx -= 1
+                    char_stack.pop()
+                else:
+                    pattern_indices[len(char_stack)] = 0
 
+            s_idx += 1
 
-
-        #         stack.append((s_char, match_len))
-        #         print(f"= \t Matched char stack.append {s_char} {match_len}")
-
-        #         if match_len == part_len:
-        #             # print("!!!!!!!!!")
-        #             if not stack:
-        #                 match_len = 0
-        #             else:
-        #                 last_match_char, last_match_len = stack[-1]
-        #                 match_len = last_match_len
-                   
-        #             # print(f"{match_len=}")
-        #             print(f"\t\t Removed from stack {stack}")
-
-        #     print(f"Stack at end {stack}\n")
-                                    
+        return "".join(char_stack)
+       
