@@ -115,6 +115,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Math
 |  |
 | ------- |
+| [1477-product-of-the-last-k-numbers](https://github.com/dsankov/leetcode/tree/master/1477-product-of-the-last-k-numbers) |
 | [2645-pass-the-pillow](https://github.com/dsankov/leetcode/tree/master/2645-pass-the-pillow) |
 ## Simulation
 |  |
@@ -125,6 +126,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [1025-minimum-cost-for-tickets](https://github.com/dsankov/leetcode/tree/master/1025-minimum-cost-for-tickets) |
+| [1477-product-of-the-last-k-numbers](https://github.com/dsankov/leetcode/tree/master/1477-product-of-the-last-k-numbers) |
 | [3434-find-the-number-of-distinct-colors-among-the-balls](https://github.com/dsankov/leetcode/tree/master/3434-find-the-number-of-distinct-colors-among-the-balls) |
 ## Dynamic Programming
 |  |
@@ -134,4 +136,16 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [3434-find-the-number-of-distinct-colors-among-the-balls](https://github.com/dsankov/leetcode/tree/master/3434-find-the-number-of-distinct-colors-among-the-balls) |
+## Design
+|  |
+| ------- |
+| [1477-product-of-the-last-k-numbers](https://github.com/dsankov/leetcode/tree/master/1477-product-of-the-last-k-numbers) |
+## Data Stream
+|  |
+| ------- |
+| [1477-product-of-the-last-k-numbers](https://github.com/dsankov/leetcode/tree/master/1477-product-of-the-last-k-numbers) |
+## Prefix Sum
+|  |
+| ------- |
+| [1477-product-of-the-last-k-numbers](https://github.com/dsankov/leetcode/tree/master/1477-product-of-the-last-k-numbers) |
 <!---LeetCode Topics End-->
