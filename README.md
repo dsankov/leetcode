@@ -130,6 +130,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1025-minimum-cost-for-tickets](https://github.com/dsankov/leetcode/tree/master/1025-minimum-cost-for-tickets) |
 | [1477-product-of-the-last-k-numbers](https://github.com/dsankov/leetcode/tree/master/1477-product-of-the-last-k-numbers) |
 | [1819-construct-the-lexicographically-largest-valid-sequence](https://github.com/dsankov/leetcode/tree/master/1819-construct-the-lexicographically-largest-valid-sequence) |
+| [2564-most-profitable-path-in-a-tree](https://github.com/dsankov/leetcode/tree/master/2564-most-profitable-path-in-a-tree) |
 | [3434-find-the-number-of-distinct-colors-among-the-balls](https://github.com/dsankov/leetcode/tree/master/3434-find-the-number-of-distinct-colors-among-the-balls) |
 ## Dynamic Programming
 |  |
@@ -186,15 +187,18 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [1093-recover-a-tree-from-preorder-traversal](https://github.com/dsankov/leetcode/tree/master/1093-recover-a-tree-from-preorder-traversal) |
 | [1387-find-elements-in-a-contaminated-binary-tree](https://github.com/dsankov/leetcode/tree/master/1387-find-elements-in-a-contaminated-binary-tree) |
+| [2564-most-profitable-path-in-a-tree](https://github.com/dsankov/leetcode/tree/master/2564-most-profitable-path-in-a-tree) |
 ## Depth-First Search
 |  |
 | ------- |
 | [1093-recover-a-tree-from-preorder-traversal](https://github.com/dsankov/leetcode/tree/master/1093-recover-a-tree-from-preorder-traversal) |
 | [1387-find-elements-in-a-contaminated-binary-tree](https://github.com/dsankov/leetcode/tree/master/1387-find-elements-in-a-contaminated-binary-tree) |
+| [2564-most-profitable-path-in-a-tree](https://github.com/dsankov/leetcode/tree/master/2564-most-profitable-path-in-a-tree) |
 ## Breadth-First Search
 |  |
 | ------- |
 | [1387-find-elements-in-a-contaminated-binary-tree](https://github.com/dsankov/leetcode/tree/master/1387-find-elements-in-a-contaminated-binary-tree) |
+| [2564-most-profitable-path-in-a-tree](https://github.com/dsankov/leetcode/tree/master/2564-most-profitable-path-in-a-tree) |
 ## Binary Tree
 |  |
 | ------- |
@@ -208,4 +212,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0088-merge-sorted-array](https://github.com/dsankov/leetcode/tree/master/0088-merge-sorted-array) |
+## Graph
+|  |
+| ------- |
+| [2564-most-profitable-path-in-a-tree](https://github.com/dsankov/leetcode/tree/master/2564-most-profitable-path-in-a-tree) |
 <!---LeetCode Topics End-->
