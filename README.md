@@ -161,6 +161,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0905-length-of-longest-fibonacci-subsequence](https://github.com/dsankov/leetcode/tree/master/0905-length-of-longest-fibonacci-subsequence) |
 | [1160-letter-tile-possibilities](https://github.com/dsankov/leetcode/tree/master/1160-letter-tile-possibilities) |
 | [1387-find-elements-in-a-contaminated-binary-tree](https://github.com/dsankov/leetcode/tree/master/1387-find-elements-in-a-contaminated-binary-tree) |
+| [1460-number-of-substrings-containing-all-three-characters](https://github.com/dsankov/leetcode/tree/master/1460-number-of-substrings-containing-all-three-characters) |
 | [2707-merge-two-2d-arrays-by-summing-values](https://github.com/dsankov/leetcode/tree/master/2707-merge-two-2d-arrays-by-summing-values) |
 | [3227-find-missing-and-repeated-values](https://github.com/dsankov/leetcode/tree/master/3227-find-missing-and-repeated-values) |
 | [3434-find-the-number-of-distinct-colors-among-the-balls](https://github.com/dsankov/leetcode/tree/master/3434-find-the-number-of-distinct-colors-among-the-balls) |
@@ -193,6 +194,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1093-recover-a-tree-from-preorder-traversal](https://github.com/dsankov/leetcode/tree/master/1093-recover-a-tree-from-preorder-traversal) |
 | [1160-letter-tile-possibilities](https://github.com/dsankov/leetcode/tree/master/1160-letter-tile-possibilities) |
 | [1170-shortest-common-supersequence](https://github.com/dsankov/leetcode/tree/master/1170-shortest-common-supersequence) |
+| [1460-number-of-substrings-containing-all-three-characters](https://github.com/dsankov/leetcode/tree/master/1460-number-of-substrings-containing-all-three-characters) |
 | [1516-the-k-th-lexicographical-string-of-all-happy-strings-of-length-n](https://github.com/dsankov/leetcode/tree/master/1516-the-k-th-lexicographical-string-of-all-happy-strings-of-length-n) |
 | [2456-construct-smallest-number-from-di-string](https://github.com/dsankov/leetcode/tree/master/2456-construct-smallest-number-from-di-string) |
 | [3569-count-of-substrings-containing-every-vowel-and-k-consonants-ii](https://github.com/dsankov/leetcode/tree/master/3569-count-of-substrings-containing-every-vowel-and-k-consonants-ii) |
@@ -256,6 +258,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Sliding Window
 |  |
 | ------- |
+| [1460-number-of-substrings-containing-all-three-characters](https://github.com/dsankov/leetcode/tree/master/1460-number-of-substrings-containing-all-three-characters) |
 | [3483-alternating-groups-ii](https://github.com/dsankov/leetcode/tree/master/3483-alternating-groups-ii) |
 | [3569-count-of-substrings-containing-every-vowel-and-k-consonants-ii](https://github.com/dsankov/leetcode/tree/master/3569-count-of-substrings-containing-every-vowel-and-k-consonants-ii) |
 <!---LeetCode Topics End-->
