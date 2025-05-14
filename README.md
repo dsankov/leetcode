@@ -132,6 +132,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [3001-apply-operations-to-maximize-score](https://github.com/dsankov/leetcode/tree/master/3001-apply-operations-to-maximize-score) |
 | [3227-find-missing-and-repeated-values](https://github.com/dsankov/leetcode/tree/master/3227-find-missing-and-repeated-values) |
 | [3243-count-the-number-of-powerful-integers](https://github.com/dsankov/leetcode/tree/master/3243-count-the-number-of-powerful-integers) |
+| [3630-total-characters-in-string-after-transformations-ii](https://github.com/dsankov/leetcode/tree/master/3630-total-characters-in-string-after-transformations-ii) |
 | [3637-count-number-of-balanced-permutations](https://github.com/dsankov/leetcode/tree/master/3637-count-number-of-balanced-permutations) |
 ## Simulation
 |  |
@@ -220,6 +221,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [2262-solving-questions-with-brainpower](https://github.com/dsankov/leetcode/tree/master/2262-solving-questions-with-brainpower) |
 | [2415-count-the-number-of-ideal-arrays](https://github.com/dsankov/leetcode/tree/master/2415-count-the-number-of-ideal-arrays) |
 | [3243-count-the-number-of-powerful-integers](https://github.com/dsankov/leetcode/tree/master/3243-count-the-number-of-powerful-integers) |
+| [3630-total-characters-in-string-after-transformations-ii](https://github.com/dsankov/leetcode/tree/master/3630-total-characters-in-string-after-transformations-ii) |
 | [3637-count-number-of-balanced-permutations](https://github.com/dsankov/leetcode/tree/master/3637-count-number-of-balanced-permutations) |
 ## Hash Table
 |  |
@@ -245,6 +247,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [3434-find-the-number-of-distinct-colors-among-the-balls](https://github.com/dsankov/leetcode/tree/master/3434-find-the-number-of-distinct-colors-among-the-balls) |
 | [3569-count-of-substrings-containing-every-vowel-and-k-consonants-ii](https://github.com/dsankov/leetcode/tree/master/3569-count-of-substrings-containing-every-vowel-and-k-consonants-ii) |
 | [3621-minimum-operations-to-make-array-values-equal-to-k](https://github.com/dsankov/leetcode/tree/master/3621-minimum-operations-to-make-array-values-equal-to-k) |
+| [3630-total-characters-in-string-after-transformations-ii](https://github.com/dsankov/leetcode/tree/master/3630-total-characters-in-string-after-transformations-ii) |
 | [3656-minimum-number-of-operations-to-make-elements-in-array-distinct](https://github.com/dsankov/leetcode/tree/master/3656-minimum-number-of-operations-to-make-elements-in-array-distinct) |
 ## Design
 |  |
@@ -289,6 +292,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [2456-construct-smallest-number-from-di-string](https://github.com/dsankov/leetcode/tree/master/2456-construct-smallest-number-from-di-string) |
 | [3243-count-the-number-of-powerful-integers](https://github.com/dsankov/leetcode/tree/master/3243-count-the-number-of-powerful-integers) |
 | [3569-count-of-substrings-containing-every-vowel-and-k-consonants-ii](https://github.com/dsankov/leetcode/tree/master/3569-count-of-substrings-containing-every-vowel-and-k-consonants-ii) |
+| [3630-total-characters-in-string-after-transformations-ii](https://github.com/dsankov/leetcode/tree/master/3630-total-characters-in-string-after-transformations-ii) |
 | [3637-count-number-of-balanced-permutations](https://github.com/dsankov/leetcode/tree/master/3637-count-number-of-balanced-permutations) |
 ## Counting
 |  |
@@ -297,6 +301,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1227-number-of-equivalent-domino-pairs](https://github.com/dsankov/leetcode/tree/master/1227-number-of-equivalent-domino-pairs) |
 | [2308-divide-array-into-equal-pairs](https://github.com/dsankov/leetcode/tree/master/2308-divide-array-into-equal-pairs) |
 | [2614-maximum-count-of-positive-integer-and-negative-integer](https://github.com/dsankov/leetcode/tree/master/2614-maximum-count-of-positive-integer-and-negative-integer) |
+| [3630-total-characters-in-string-after-transformations-ii](https://github.com/dsankov/leetcode/tree/master/3630-total-characters-in-string-after-transformations-ii) |
 ## Stack
 |  |
 | ------- |
