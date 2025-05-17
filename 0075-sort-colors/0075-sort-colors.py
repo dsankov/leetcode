@@ -3,10 +3,17 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        colors = Counter(nums)
-        offset = 0
-        for color in sorted(colors):
-            for i in range(colors[color]):
-                nums[offset + i] = color
-            offset += colors[color]
-            
+        
+        low, high = 0, len(nums) - 1
+        mid = 0
+
+        while mid <= high:
+            if nums[mid] == 0:
+                nums[mid], nums[low] = nums[low], nums[mid]
+                low += 1
+                mid += 1
+            elif nums[mid] == 2:
+                nums[mid], nums[high] = nums[high], nums[mid]
+                high -= 1
+            else:
+                mid += 1

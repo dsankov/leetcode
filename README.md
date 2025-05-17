@@ -145,6 +145,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Array
 |  |
 | ------- |
+| [0075-sort-colors](https://github.com/dsankov/leetcode/tree/master/0075-sort-colors) |
 | [0088-merge-sorted-array](https://github.com/dsankov/leetcode/tree/master/0088-merge-sorted-array) |
 | [0368-largest-divisible-subset](https://github.com/dsankov/leetcode/tree/master/0368-largest-divisible-subset) |
 | [0416-partition-equal-subset-sum](https://github.com/dsankov/leetcode/tree/master/0416-partition-equal-subset-sum) |
@@ -357,6 +358,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Two Pointers
 |  |
 | ------- |
+| [0075-sort-colors](https://github.com/dsankov/leetcode/tree/master/0075-sort-colors) |
 | [0088-merge-sorted-array](https://github.com/dsankov/leetcode/tree/master/0088-merge-sorted-array) |
 | [0768-partition-labels](https://github.com/dsankov/leetcode/tree/master/0768-partition-labels) |
 | [0868-push-dominoes](https://github.com/dsankov/leetcode/tree/master/0868-push-dominoes) |
@@ -368,6 +370,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Sorting
 |  |
 | ------- |
+| [0075-sort-colors](https://github.com/dsankov/leetcode/tree/master/0075-sort-colors) |
 | [0088-merge-sorted-array](https://github.com/dsankov/leetcode/tree/master/0088-merge-sorted-array) |
 | [0368-largest-divisible-subset](https://github.com/dsankov/leetcode/tree/master/0368-largest-divisible-subset) |
 | [2160-minimum-operations-to-make-a-uni-value-grid](https://github.com/dsankov/leetcode/tree/master/2160-minimum-operations-to-make-a-uni-value-grid) |
