@@ -7,7 +7,6 @@ class Solution:
             a, b = intervals[i]
             for j in range(i):
                 x, y = intervals[j]
-                print("\t", x, y)
                 if x <=a and b <= y:
                     interval_count -= 1
                     break
