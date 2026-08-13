@@ -55,9 +55,9 @@ class Solution:
                 self.tree[left_child].suffix_len + self.tree[right_child].prefix_len
             )
 
-        def update_char(self, index: int, new_char: str):
-            self.char_array[index] = new_char
-            self.update_tree(update_index=index, parent_node=1, left=0, right=self.n-1)
+        def update_char(self, update_index: int, new_char: str):
+            self.char_array[update_index] = new_char
+            self.update_tree(update_index=update_index, parent_node=1, left=0, right=self.n-1)
 
         def update_tree(self, update_index: int, parent_node: int, left: int, right: int):
             if left == right:
@@ -80,7 +80,7 @@ class Solution:
         seg_tree = self.SegTree(s)
         result = []
         for query_index, new_char in zip(queryIndices, queryCharacters):
-            seg_tree.update_char(index=query_index, new_char=new_char)
+            seg_tree.update_char(update_index=query_index, new_char=new_char)
             result.append(seg_tree.best_len)
         return result
         
