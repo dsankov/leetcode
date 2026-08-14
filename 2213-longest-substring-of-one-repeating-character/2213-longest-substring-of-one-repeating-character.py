@@ -17,8 +17,8 @@ class Solution:
 
         def build_tree(self, parent_node: int, left: int, right: int):
             if left == right:
-                leaf = self.Node(prefix_len=1, suffix_len=1, best_len=1)
-                self.tree[parent_node] = leaf
+                # leaf = self.Node(prefix_len=1, suffix_len=1, best_len=1)
+                # self.tree[parent_node] = leaf
                 return
 
             mid = (left + right) // 2
