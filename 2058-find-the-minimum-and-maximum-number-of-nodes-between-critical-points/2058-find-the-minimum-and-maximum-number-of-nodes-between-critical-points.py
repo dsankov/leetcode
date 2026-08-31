@@ -5,26 +5,41 @@
 #         self.next = next
 class Solution:
     def nodesBetweenCriticalPoints(self, head: Optional[ListNode]) -> List[int]:
-        prev_node = head
-        last_extremum_index = 0
-        min_seen_interval = float("inf")
-        cur_node = head.next
-        cur_index = 1
-        while cur_node.next:
-            if prev_node.val < cur_node.val > cur_node.next.val \
-                or prev_node.val > cur_node.val < cur_node.next.val:
-                    if last_extremum_index == 0:
-                        last_extremum_index = cur_index
-                        first_extremum_index = cur_index
+        prev_node = None
+        cur_node = head
+        next_node = head.next
+
+        first_critical_id = cur_critical_id = None
+        min_critical_distance = inf
+        cur_node_id = 0
+
+        while cur_node:
+            cur_node_id += 1
+            if not next_node:
+                break
+
+            if prev_node:
+                prev_val = prev_node.val
+                cur_val = cur_node.val
+                next_val = next_node.val
+
+                if prev_val < cur_val and cur_val > next_val or prev_val > cur_val and cur_val < next_val:
+                    # print(cur_node_id, prev_val, cur_val, next_val)
+                    if not first_critical_id:
+                        first_critical_id = cur_node_id
+                        prev_critical_id = cur_node_id
                     else:
-                        min_seen_interval = min(min_seen_interval,
-                                                cur_index - last_extremum_index)
-                        last_extremum_index = cur_index
-            prev_node = cur_node
-            cur_index += 1
-            cur_node = cur_node.next
-        if min_seen_interval == float("inf"):
+                        cur_critical_id = cur_node_id
+                        min_critical_distance = min(min_critical_distance, cur_critical_id - prev_critical_id)
+                        prev_critical_id = cur_critical_id
+
+            prev_node, cur_node, next_node = cur_node, next_node, next_node.next
+
+        if not first_critical_id or not cur_critical_id or first_critical_id == cur_critical_id:
             return [-1, -1]
-        else:
-            return [min_seen_interval, last_extremum_index - first_extremum_index]
+
+        return [min_critical_distance, cur_critical_id - first_critical_id]
+
+                
+
         
